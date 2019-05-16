@@ -38,7 +38,6 @@ const AddRequest: React.FunctionComponent<IAddRequestProps> = ({}) => {
     const handleDayClick = (date: Date) => {
         const range = DayPicker.default.DateUtils.addDayToRange(date, state);
         setState(range);
-        console.log(range);
     }
 
     const handleDropdownChange = (value: string) => {
@@ -101,9 +100,9 @@ const AddRequest: React.FunctionComponent<IAddRequestProps> = ({}) => {
                     variables: {
                     _id: objectRefId,
                     role,
-                    projectId: activeProject._id,
                     to,
                     from,
+                    projectId: role === Role.developer ? activeProject._id : undefined
                     }
                 }).catch( (e: any) => {
                 console.log(e.message);
