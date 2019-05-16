@@ -24,7 +24,7 @@ const ActiveRequestList: React.FC<IRequestListProps> = ({query, variables, toggl
         </div>
         <div className={`${className}__requests`}>
             <Query query={query} variables={variables}>
-                {({ loading, error, data}) => {
+                {({ loading, error, data}: any) => {
                     if ( loading ) return <p>Loading...</p>;
                     if ( error ) return <p>Error...</p>;
                     if ( data ) return (data[dataType] as IHolidayRequest[]).map((request: IHolidayRequest, index: number) => {

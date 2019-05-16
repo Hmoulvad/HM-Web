@@ -4,7 +4,7 @@ interface IButton {
     onClick?: any;
     text: string;
     className?: string;
-    type?: string;
+    type?: 'submit' | 'reset' | 'button' | undefined;
 }
 
 const Button: React.FunctionComponent<IButton> = ({text, onClick, className = "", type = "submit"}) => {

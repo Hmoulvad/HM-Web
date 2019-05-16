@@ -21,7 +21,7 @@ const LoginComponent: React.FC<any> = (props: any) => {
 		<LayoutContainer>
 		<div className="login">
 			<Mutation mutation={ GraphQLSchema.LOGIN }>
-				{( login, { error } ) => (
+				{( login: any, { error }: any ) => (
 					<div className="login__container">
 						<h4 className="login__header">Signin to IMPACT HM</h4>
 						<form className="login__form" onSubmit={e => {
@@ -35,7 +35,7 @@ const LoginComponent: React.FC<any> = (props: any) => {
 									localStorage.setItem("token", res.data.login);
 									setAuth(true);
 								}
-							}).catch (e => {e.message});
+							}).catch ((e: any) => {e.message});
 						}}>
 							<input className="login__input" placeholder="E-mail address" type="email" ref={ node => emailRef = node }/>
 							<input className="login__input" placeholder="Password" type="password" ref={ node => passwordRef = node }/>

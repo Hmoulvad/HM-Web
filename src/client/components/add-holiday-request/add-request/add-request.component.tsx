@@ -94,7 +94,7 @@ const AddRequest: React.FunctionComponent<IAddRequestProps> = ({}) => {
             onDayClick={handleDayClick}
         />
         <Mutation mutation={GraphqlSchema.ADD_HOLIDAY_REQUEST}>
-            {( addHolidayRequest, { error }) => (
+            {( addHolidayRequest: any, { error }: any) => (
                 <Button text="Add Request" className={`${className}__add-button`} onClick={(e: any) => {
                     e.preventDefault();
                     addHolidayRequest({
@@ -105,7 +105,7 @@ const AddRequest: React.FunctionComponent<IAddRequestProps> = ({}) => {
                     to,
                     from,
                     }
-                }).catch( e => {
+                }).catch( (e: any) => {
                 console.log(e.message);
                 })
                 }}/>
