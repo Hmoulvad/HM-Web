@@ -113,7 +113,6 @@ class App extends React.PureComponent<IAppProps, IAppContext> {
 							<Media query="(max-width: 900px)">
 								{matches =>
 								<>
-									{console.log(new Date().getTime())}
 									{!isApp && <Navigation mobile={matches} />}
 										<Routes />
 									<Footer />
