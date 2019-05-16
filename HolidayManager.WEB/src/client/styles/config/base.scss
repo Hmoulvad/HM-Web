@@ -1,0 +1,42 @@
+button {
+    cursor: pointer;
+}
+
+body {
+    @include body;
+    background-color: transparent;
+}
+
+html {
+    background: url(https://i.imgur.com/SQoaH4b.png) no-repeat center center
+        fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+p {
+    margin: 5px 0;
+}
+
+input {
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+button {
+    border: none !important;
+    &:focus {
+        outline: none;
+    }
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+        color: white;
+    }
+}

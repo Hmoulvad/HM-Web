@@ -1,0 +1,37 @@
+.active-request {
+    padding-top: 15px;
+    &__title {
+        padding: 10px 0;
+        font-weight: bold;
+    }
+    &__modal {
+        padding: 30px;
+        margin: 20vh auto;
+        min-height: 200px;
+        width: 70%;
+        background-color: white;
+        border-radius: 10px;
+
+        @include media-breakpoint-down(sm) {
+            padding: 15px;
+            width: 90%;
+        }
+
+        &__header {
+            font-weight: bold;
+        }
+
+        &__description {
+            padding-bottom: 10px;
+        }
+
+        &__date {
+            font-weight: bold;
+            padding-left: 5px;
+        }
+
+        &__request {
+            padding-bottom: 10px;
+        }
+    }
+}

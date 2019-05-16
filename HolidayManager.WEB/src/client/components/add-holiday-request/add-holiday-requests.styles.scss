@@ -1,0 +1,33 @@
+.add-holiday-request {
+    background-color: $Impact-White;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 30px;
+
+    @include media-breakpoint-down(sm) {
+        padding: 15px;
+        width: 100%;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__header {
+        flex: 70%;
+    }
+
+    &__title {
+        font-weight: bold;
+    }
+
+    &__description {
+    }
+
+    &__add-request {
+        border-radius: 5px;
+        align-self: center;
+    }
+}

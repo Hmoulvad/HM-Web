@@ -1,0 +1,115 @@
+.add-request {
+    &__reset-button {
+        margin-right: 10px;
+        border-radius: 5px;
+    }
+
+    &__project {
+        margin: 5px 0px 15px 0px;
+    }
+
+    &__description {
+        margin: 15px 0;
+    }
+
+    &__dropdown {
+        &-wrapper {
+        }
+    }
+
+    &__reset-button {
+    }
+
+    &__selected {
+        padding-bottom: 10px;
+        &-header {
+            padding-bottom: 5px;
+            font-weight: bold;
+        }
+
+        &-dates {
+            display: flex;
+        }
+
+        &-date {
+            display: flex;
+            flex: 1;
+            justify-content: space-evenly;
+
+            @include media-breakpoint-up(sm) {
+                display: inline;
+                flex: none;
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+.DayPicker {
+    @include media-breakpoint-up(md) {
+        display: block !important;
+    }
+
+    &-NavBar {
+        @include media-breakpoint-up(md) {
+            padding-top: 10px !important;
+        }
+    }
+
+    &-NavButton {
+        @include media-breakpoint-up(md) {
+            &--prev {
+                top: 0 !important;
+                right: 0 !important;
+                position: relative !important;
+            }
+            &--next {
+                top: 0 !important;
+                right: 0 !important;
+                position: relative !important;
+            }
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+    &-Months {
+        @include media-breakpoint-up(md) {
+            justify-content: start !important;
+        }
+    }
+
+    &-Month {
+        margin: 0 !important;
+        margin-top: 1em !important;
+
+        @include media-breakpoint-up(md) {
+            margin: 15px 50px 15px 0px !important;
+        }
+    }
+    &-Day {
+        @include media-breakpoint-up(md) {
+            padding: 1em !important;
+        }
+        &--today {
+            color: $Impact-Black !important;
+        }
+    }
+}
+
+.Selectable
+    .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
+    background-color: #f0f8ff !important;
+    color: #4a90e2;
+}
+.Selectable .DayPicker-Day {
+    border-radius: 0 !important;
+}
+.Selectable .DayPicker-Day--start {
+    border-top-left-radius: 50% !important;
+    border-bottom-left-radius: 50% !important;
+}
+.Selectable .DayPicker-Day--end {
+    border-top-right-radius: 50% !important;
+}

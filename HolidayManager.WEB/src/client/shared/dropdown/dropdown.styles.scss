@@ -1,0 +1,158 @@
+$dropdown-box-shadow: 4px 4px 8px rgba(grey, 0.25);
+
+.dropdown {
+    position: relative;
+    display: flex;
+    height: 42px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+
+    @include media-breakpoint-down(lg) {
+        justify-content: flex-end;
+    }
+
+    @include media-breakpoint-down(sm) {
+        font-size: 13px;
+    }
+
+    &--inline {
+        display: inline-flex;
+    }
+
+    &__value,
+    &__portable-select {
+        flex: 1;
+        padding: 11px 0 11px 13px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__portable-select {
+        color: inherit;
+        cursor: pointer;
+        position: absolute;
+        width: 100%;
+        appearance: none;
+        padding: 11px 40px 11px 13px;
+
+        @include media-breakpoint-down(xs) {
+            color: inherit;
+            cursor: pointer;
+            width: 100%;
+            appearance: none;
+            padding: 11px 45px 11px 13px;
+        }
+
+        &,
+        &:focus {
+            outline: none;
+        }
+
+        > option {
+            color: grey;
+        }
+    }
+
+    &__spacer {
+        width: 1px;
+        margin: 8px 0;
+        background-color: $Impact-Gray;
+        z-index: 20;
+    }
+
+    &__icon-container {
+        color: grey;
+        flex-shrink: 0;
+        z-index: 20;
+
+        svg > path:first-child {
+            fill: grey;
+        }
+    }
+
+    &__icon {
+        width: 40px;
+        height: 100%;
+    }
+
+    &__list {
+        position: absolute;
+        z-index: 10;
+        top: 45px;
+        left: 0;
+        width: 100%;
+        background-color: $Impact-White;
+        border: 1px solid $Impact-Gray;
+        border-radius: 4px;
+        box-shadow: $dropdown-box-shadow;
+        list-style: none;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    &__item {
+        padding: 0 13px;
+        position: relative;
+        z-index: 0;
+
+        &--active {
+        }
+    }
+
+    &__item-hover-bg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        display: none;
+
+        .dropdown__item:hover &,
+        .dropdown__item:focus & {
+            background-color: $Impact-Gray;
+            display: block;
+        }
+    }
+
+    &__label {
+        left: 0;
+    }
+
+    &--with-label {
+        height: 55px;
+        align-items: flex-end;
+
+        @include media-breakpoint-down(lg) {
+            flex-wrap: wrap;
+            height: auto;
+        }
+
+        .dropdown {
+            &__value,
+            &__portable-select {
+                position: relative;
+                padding: 11px 0 7px 15px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                @include media-breakpoint-down(lg) {
+                    padding: 25px 10px 15px;
+                }
+            }
+
+            &__icon-container {
+                pointer-events: none;
+
+                @include media-breakpoint-down(lg) {
+                    position: absolute;
+                    right: 0;
+                }
+            }
+        }
+    }
+}

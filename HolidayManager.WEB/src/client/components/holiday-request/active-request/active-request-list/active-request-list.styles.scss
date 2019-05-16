@@ -1,0 +1,93 @@
+.active-request-list {
+    padding: 15px;
+    @include media-breakpoint-down(sm) {
+        padding: 15px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__header {
+        flex: 70%;
+    }
+
+    &__headlines {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include media-breakpoint-down(sm) {
+            margin: 0x -5px;
+        }
+    }
+
+    &__headline {
+        font-weight: bold;
+        flex: 22.5%;
+        @include media-breakpoint-down(sm) {
+            font-size: 12px;
+        }
+
+        &_days {
+            font-weight: bold;
+            flex: 10%;
+            @include media-breakpoint-down(sm) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__request {
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        transition: 0.3s padding linear;
+        margin: 0px -30px;
+        border-radius: 3px;
+        padding: 15px 30px;
+
+        @include media-breakpoint-down(sm) {
+            padding: 8px 10px;
+            margin: 0px -15px;
+        }
+
+        &:nth-child(2n) {
+            background-color: rgba($color: $Impact-Blue, $alpha: 0.7);
+        }
+
+        @include media-breakpoint-up(md) {
+            &:hover {
+                cursor: pointer;
+                padding: 30px 30px;
+            }
+        }
+
+        &-text {
+            flex: 22.5%;
+            @include media-breakpoint-down(sm) {
+                font-size: 11px;
+            }
+        }
+        &-days {
+            @include media-breakpoint-down(sm) {
+                font-size: 12px;
+                text-align: center;
+            }
+            flex: 10%;
+        }
+
+        &-status {
+            font-weight: bold;
+        }
+
+        &-button {
+            position: absolute;
+            right: 10px;
+            top: -3px;
+            border-radius: 5px;
+            background-color: yellowgreen;
+        }
+    }
+}

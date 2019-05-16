@@ -1,0 +1,65 @@
+{
+    "name": "impact-holiday-manager-web-app",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "apollo-boost": "^0.3.1",
+        "apollo-link-context": "^1.0.15",
+        "bootstrap": "^4.3.1",
+        "graphql": "^14.1.1",
+        "install": "^0.12.2",
+        "jsonwebtoken": "^8.5.1",
+        "npm": "^6.9.0",
+        "react": "^16.8.1",
+        "react-apollo": "^2.5.2",
+        "react-datepicker": "^2.4.0",
+        "react-day-picker": "^7.3.0",
+        "react-device-detect": "^1.6.2",
+        "react-dom": "^16.8.1",
+        "react-dropdown": "^1.6.4",
+        "react-helmet": "^5.2.0",
+        "react-media": "^1.9.2",
+        "react-redux": "^6.0.1",
+        "react-router-dom": "^4.3.1",
+        "react-scripts": "^2.1.8",
+        "react-transition-group": "^4.0.1",
+        "save": "^2.3.3"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "serve": "serve -s build -l 5000"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ],
+    "devDependencies": {
+        "@types/enzyme": "^3.9.2",
+        "@types/graphql": "^14.0.7",
+        "@types/jest": "^24.0.0",
+        "@types/jsonwebtoken": "^8.3.2",
+        "@types/node": "^10.12.23",
+        "@types/node-sass": "^4.11.0",
+        "@types/react": "^16.8.2",
+        "@types/react-datepicker": "^2.3.0",
+        "@types/react-dom": "^16.8.0",
+        "@types/react-helmet": "^5.0.8",
+        "@types/react-redux": "^7.0.6",
+        "@types/react-router-dom": "^4.3.1",
+        "@types/react-transition-group": "^2.9.1",
+        "@types/enzyme-adapter-react-16": "^1.0.5",
+        "enzyme": "^3.9.0",
+        "enzyme-adapter-react-16": "^1.13.0",
+        "node-sass": "^4.11.0",
+        "tslint-config-prettier": "^1.18.0",
+        "typescript": "^3.3.3"
+    }
+}

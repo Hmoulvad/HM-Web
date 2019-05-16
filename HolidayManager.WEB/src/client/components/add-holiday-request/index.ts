@@ -1,0 +1,1 @@
+export { default } from "./add-holiday-request.component";

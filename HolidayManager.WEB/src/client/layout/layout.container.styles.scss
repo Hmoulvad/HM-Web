@@ -1,0 +1,14 @@
+.layout {
+    width: 100%;
+    margin: 0 auto;
+    max-width: $grid-medium-max-width;
+    padding: 0 $grid-gutter-desktop;
+
+    @include media-breakpoint-down(sm) {
+        padding: 0 $grid-gutter-mobile;
+    }
+
+    &--no-padding {
+        padding: 0 !important;
+    }
+}
