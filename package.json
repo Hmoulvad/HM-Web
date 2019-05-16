@@ -6,10 +6,13 @@
         "apollo-boost": "^0.3.1",
         "apollo-link-context": "^1.0.15",
         "bootstrap": "^4.3.1",
+        "express": "^4.16.4",
+        "express-favicon": "^2.0.1",
         "graphql": "^14.1.1",
         "install": "^0.12.2",
         "jsonwebtoken": "^8.5.1",
         "npm": "^6.9.0",
+        "path": "^0.12.7",
         "react": "^16.8.1",
         "react-apollo": "^2.5.2",
         "react-datepicker": "^2.4.0",
@@ -26,7 +29,8 @@
         "save": "^2.3.3"
     },
     "scripts": {
-        "start": "react-scripts start",
+        "start": "node server.js",
+        "start:react": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
