@@ -17,6 +17,8 @@ interface IRequestListProps {
 const PendingRequestList: React.FC<IRequestListProps> = ({query, variables, toggleRequest, dataType, className = "pending-request-list"}): JSX.Element => {
     const { role } = React.useContext(AppContext);
 
+    console.log(variables);
+
     const renderManagerName = (request: IHolidayRequest): JSX.Element => {
         if ( role === Role.unitManager) {
             return <div className={`${className}__request-text`}>{request.refName} - <span className={`${className}__request-status`}>{holidayStatus(request.refApproval)}</span></div>
@@ -32,7 +34,7 @@ const PendingRequestList: React.FC<IRequestListProps> = ({query, variables, togg
             <div className={`${className}__headline`}>Period</div>
             <div className={`${className}__headline_days`}>Days</div>
             <div className={`${className}__headline`}>Requester</div>
-            <div className={`${className}__headline`}>{role === Role.projectManager ? "Project Manager" : "Unit Manager"}</div>
+            <div className={`${className}__headline`}>{role === Role.projectManager ? "Unit Manager" : "Project Manager"}</div>
         </div>
         <div className={`${className}__requests`}>
             <Query query={query} variables={variables}>

@@ -9,7 +9,6 @@ import PendingRequestList from './pending-request-list';
 import { convertUnixToDate } from '../../helpers/date';
 import { DocumentNode } from 'graphql';
 import client from '../../apolloClient';
-import Button from '../../shared/button';
 
 const Pending: React.FC<any> = (props) => {
     const { objectRefId, role } = React.useContext(AppContext);

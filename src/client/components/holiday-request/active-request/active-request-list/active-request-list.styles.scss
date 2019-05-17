@@ -30,6 +30,14 @@
             font-size: 12px;
         }
 
+        &--single {
+            flex: 45%;
+            font-weight: bold;
+            @include media-breakpoint-down(sm) {
+                font-size: 12px;
+            }
+        }
+
         &_days {
             font-weight: bold;
             flex: 10%;
@@ -68,6 +76,12 @@
             flex: 22.5%;
             @include media-breakpoint-down(sm) {
                 font-size: 11px;
+            }
+            &--single {
+                flex: 45%;
+                @include media-breakpoint-down(sm) {
+                    font-size: 11px;
+                }
             }
         }
         &-days {
