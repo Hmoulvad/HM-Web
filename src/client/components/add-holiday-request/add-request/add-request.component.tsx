@@ -106,6 +106,10 @@ const AddRequest: React.FunctionComponent<IAddRequestProps> = ({}) => {
                     }
                 }).catch( (e: any) => {
                 console.log(e.message);
+                }).then((res: any) => {
+                    if (!!res) {
+                        alert("A request was added")
+                    }
                 })
                 }}/>
             )}
