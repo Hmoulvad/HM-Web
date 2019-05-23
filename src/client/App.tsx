@@ -93,11 +93,11 @@ class App extends React.PureComponent<IAppProps, IAppContext> {
 		} else {
 			const token = localStorage.getItem("token")
 			if (!!token) {
-				const { data } = jwt.decode(token) as IToken;
-				this.setState({ userId: data.id, role: data.role, objectRefId: data.objectRefId})
 				const isAuth = await isAuthenticated();
 				if (isAuth) {
-					this.setState({isAuth: true})
+					this.setState({isAuth: true});
+					const { data } = jwt.decode(token) as IToken;
+					this.setState({ userId: data.id, role: data.role, objectRefId: data.objectRefId})
 				}
 			}
 		}	
